@@ -1,0 +1,34 @@
+[project]
+authors = ["Braden Helmer <bradenhelmeraus@gmail.com>"]
+channels = ["conda-forge", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community"]
+description = "Add a short description here"
+name = "gpu_puzzles"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+p01 = "mojo p01/p01.mojo"
+p02 = "mojo p02/p02.mojo"
+p03 = "mojo p03/p03.mojo"
+p04 = "mojo p04/p04.mojo"
+p04_layout_tensor = "mojo p04/p04_layout_tensor.mojo"
+layout_tensor_intro = "mojo book/src/puzzle_04/intro.mojo"
+p05 = "mojo p05/p05.mojo"
+p05_layout_tensor = "mojo p05/p05_layout_tensor.mojo"
+p06 = "mojo p06/p06.mojo"
+p07 = "mojo p07/p07.mojo"
+p07_layout_tensor = "mojo p07/p07_layout_tensor.mojo"
+p08 = "mojo p08/p08.mojo"
+p08_layout_tensor = "mojo p08/p08_layout_tensor.mojo"
+p09 = "mojo p09/p09.mojo"
+p09_layout_tensor = "mojo p09/p09_layout_tensor.mojo"
+p10 = "mojo p10/p10.mojo"
+p10_layout_tensor = "mojo p10/p10_layout_tensor.mojo"
+p11 = "mojo p11/p11.mojo"
+p12 = "mojo p12/p12.mojo"
+p13 = "mojo p13/p13.mojo"
+p14 = "mojo p14/p14.mojo"
+p15 = "cd p15 && mojo package op -o op.mojopkg && python p15.py"
+
+[dependencies]
+max = ">=25.3.0,<26"
