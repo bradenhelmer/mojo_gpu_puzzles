@@ -1,7 +1,7 @@
 [project]
 authors = ["Braden Helmer <bradenhelmeraus@gmail.com>"]
 channels = ["conda-forge", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community"]
-description = "Add a short description here"
+description = "Mojo GPU Puzzle Solutions"
 name = "gpu_puzzles"
 platforms = ["linux-64"]
 version = "0.1.0"
@@ -30,5 +30,10 @@ p13 = "mojo p13/p13.mojo"
 p14 = "mojo p14/p14.mojo"
 p15 = "cd p15 && mojo package op -o op.mojopkg && python p15.py"
 
+p16-package = "cd p16 && mojo package op -o op.mojopkg"
+p16-test-kernels = { cmd = "mojo test p16", depends-on = ["p16-package"] }
+p16 = { cmd = "python p16/p16.py", depends-on = ["p16-package"] }
+
 [dependencies]
 max = ">=25.3.0,<26"
+scipy = ">=1.15.2,<2"
