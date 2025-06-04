@@ -38,6 +38,8 @@ p17-package = "cd p17 && mojo package op -o op.mojopkg"
 p17-test-kernels = { cmd = "mojo test p17", depends-on = ["p17-package"] }
 p17 = { cmd = "python p17/p17.py", depends-on = ["p17-package"] }
 
+p20 = "mojo p20/p20.mojo"
+
 [dependencies]
 max = ">=25.3.0,<26"
 scipy = ">=1.15.2,<2"
