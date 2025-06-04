@@ -34,6 +34,10 @@ p16-package = "cd p16 && mojo package op -o op.mojopkg"
 p16-test-kernels = { cmd = "mojo test p16", depends-on = ["p16-package"] }
 p16 = { cmd = "python p16/p16.py", depends-on = ["p16-package"] }
 
+p17-package = "cd p17 && mojo package op -o op.mojopkg"
+p17-test-kernels = { cmd = "mojo test p17", depends-on = ["p17-package"] }
+p17 = { cmd = "python p17/p17.py", depends-on = ["p17-package"] }
+
 [dependencies]
 max = ">=25.3.0,<26"
 scipy = ">=1.15.2,<2"
